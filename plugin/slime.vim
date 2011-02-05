@@ -1,4 +1,3 @@
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function Send_to_Screen(text)
@@ -25,8 +24,7 @@ endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-vmap <C-c><C-c> "ry :call Send_to_Screen(@r)<CR>
-nmap <C-c><C-c> vip<C-c><C-c>
-
-nmap <C-c>v :call Screen_Vars()<CR>
-
+autocmd FileType clojure nmap <C-m> ggVG<C-c><C-c>
+autocmd FileType clojure vmap <C-c><C-c> "ry :call Send_to_Screen(@r)<CR>
+autocmd FileType clojure nmap <C-c><C-c> vip<C-c><C-c>
+autocmd FileType clojure nmap <C-c>v :call Screen_Vars()<CR>
